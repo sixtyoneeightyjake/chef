@@ -132,7 +132,7 @@ export function MissingApiKey({ provider, requireKey, resetDisableChatMessage }:
             <>
               You&apos;ve chosen to always use your own API keys, but haven&apos;t set a{' '}
               <span className="font-semibold">{displayModelProviderName(provider)}</span> API key yet. You may choose to
-              use a different model provider, use Chef tokens instead of your own API keys, or add an API key for{' '}
+              use a different model provider, let MojoCode burn its own tokens instead of yours, or add an API key for{' '}
               <span className="font-semibold">{displayModelProviderName(provider)}</span>.
             </>
           )}
@@ -145,9 +145,9 @@ export function MissingApiKey({ provider, requireKey, resetDisableChatMessage }:
           onConfirm={handleUseConvexTokens}
           variant="primary"
           confirmText="Confirm"
-          dialogTitle={'Change Chef token preference'}
+          dialogTitle={'Change MojoCode token preference'}
           dialogBody={
-            'Confirming will disable your preference to always use your own API keys. Instead, Chef will prefer using Chef tokens when built-in quota is available.'
+            'Confirming will disable your preference to always use your own API keys. Instead, MojoCode will gleefully spend MojoCode tokens whenever the built-in quota exists.'
           }
         />
       )}
@@ -177,7 +177,7 @@ export function MissingApiKey({ provider, requireKey, resetDisableChatMessage }:
               </svg>
             }
           >
-            Use Chef Tokens instead
+            Use MojoCode tokens instead
           </Button>
         </div>
       ) : (

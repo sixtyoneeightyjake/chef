@@ -143,7 +143,7 @@ function displayUsage(usageAnnotation: UsageAnnotation, provider: ProviderType, 
   const { chefTokens, breakdown } = calculateChefTokens(usage, provider);
   return (
     <div className="text-xs text-content-secondary">
-      Chef Tokens: {displayChefTokenNumber(chefTokens)}
+      MojoCode tokens: {displayChefTokenNumber(chefTokens)}
       {showUsageAnnotations ? `, ${displayBreakdownForSingleAnnotation(breakdown)}` : ''}
     </div>
   );

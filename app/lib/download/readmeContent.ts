@@ -1,8 +1,8 @@
 export function generateReadmeContent(description: string, convexDeploymentName: string | null) {
   return `# ${description}
   
-This is a project built with [Chef](https://chef.convex.dev) using [Convex](https://convex.dev) as its backend.
- You can find docs about Chef with useful information like how to deploy to production [here](https://docs.convex.dev/chef).
+This is a project built with [MojoCode](https://chef.convex.dev) (Convex's sarcastic AI app builder) using [Convex](https://convex.dev) as its backend.
+ You can find docs about MojoCode with useful information like how to deploy to production [here](https://docs.convex.dev/chef).
   
 ${convexDeploymentName ? generateConvexDeploymentContent(convexDeploymentName) : ''}
   
@@ -16,7 +16,7 @@ The backend code is in the \`convex\` directory.
 
 ## App authentication
 
-Chef apps use [Convex Auth](https://auth.convex.dev/) with Anonymous auth for easy sign in. You may wish to change this before deploying your app.
+MojoCode apps use [Convex Auth](https://auth.convex.dev/) with Anonymous auth for easy sign in. You may wish to change this before deploying your app.
 
 ## Developing and deploying your app
 

@@ -94,7 +94,7 @@ const CodeShow: FC<CodeShowProps> = ({ code, ...props }) => {
 const ShowInner: FC<ShowInnerProps> = ({ share, className }) => {
   const [showIframe, setShowIframe] = useState(false);
   const defaultAuthor = {
-    username: 'Chef User',
+    username: 'MojoCode User',
     avatar: '',
   } as const;
 
@@ -141,7 +141,7 @@ const ShowInner: FC<ShowInnerProps> = ({ share, className }) => {
       <div className="mb-1 grid w-full grid-cols-1 items-center gap-2 md:grid-cols-2">
         {/* Title, smaller on mobile */}
         <h1 className="m-0 truncate text-left text-lg font-semibold md:text-xl">{share.description}</h1>
-        {/* Desktop: Clone app in Chef with Chef icon, mobile: What's Chef? */}
+        {/* Desktop: Clone app in MojoCode with MojoCode icon, mobile: What's MojoCode? */}
         <div className="flex justify-end md:justify-end">
           <Button
             href={
@@ -155,12 +155,12 @@ const ShowInner: FC<ShowInnerProps> = ({ share, className }) => {
             tip={
               typeof window !== 'undefined' && window.innerWidth < 768
                 ? undefined
-                : `New users: clone this app and get 85,000 bonus Chef tokens, plus some for the author of this app!
+                : `New users: clone this app and get 85,000 bonus MojoCode tokens, plus a pity stipend for the author.
 ` /* TODO this is buggy */
             }
           >
-            <span className="hidden md:inline">Clone app in Chef</span>
-            <span className="inline md:hidden">What&apos;s Chef?</span>
+            <span className="hidden md:inline">Clone app in MojoCode</span>
+            <span className="inline md:hidden">What&apos;s MojoCode?</span>
           </Button>
         </div>
       </div>
@@ -177,7 +177,7 @@ const ShowInner: FC<ShowInnerProps> = ({ share, className }) => {
             </Button>
           ) : (
             <Button href="/" variant="primary" className="ml-2">
-              Try Chef
+              Try MojoCode
             </Button>
           )}
         </div>
@@ -227,7 +227,9 @@ const ShowInner: FC<ShowInnerProps> = ({ share, className }) => {
       {share.referralCode && (
         <div className="mt-2 hidden rounded-lg border border-bolt-elements-background-depth-3 bg-bolt-elements-background-depth-2 p-4 md:block">
           <div className="text-center">
-            <p className="text-base font-medium text-content-primary">Join Convex and get 85,000 bonus Chef tokens.</p>
+            <p className="text-base font-medium text-content-primary">
+              Join Convex and get 85,000 bonus MojoCode tokens. Apparently bribery works.
+            </p>
             <p className="mt-1 text-xs text-content-secondary">
               When you sign up, {author.username} will earn bonus resources too!
             </p>

@@ -15,8 +15,8 @@ export default function ChatAlert({ alert, clearAlert, postMessage }: Props) {
   const isPreview = source === 'preview';
   const title = isPreview ? 'Preview Error' : 'Terminal Error';
   const message = isPreview
-    ? 'We encountered an error while running the preview. Would you like Chef to analyze and help resolve this issue?'
-    : 'We encountered an error while running terminal commands. Would you like Chef to analyze and help resolve this issue?';
+    ? 'We hit an error while running the preview. Want MojoCode to sigh loudly and help fix it?'
+    : 'We hit an error while running terminal commands. Want MojoCode to roll its eyes and help fix it?';
 
   return (
     <AnimatePresence>
@@ -85,7 +85,7 @@ export default function ChatAlert({ alert, clearAlert, postMessage }: Props) {
                   )}
                 >
                   <ChatBubbleIcon />
-                  Ask Chef
+                  Ask MojoCode
                 </button>
                 <button
                   onClick={clearAlert}

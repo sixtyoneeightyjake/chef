@@ -49,13 +49,13 @@ type Highlight = {
 const HIGHLIGHTS: Highlight[] = [
   {
     text: 'ai chat',
-    tooltip: 'Unless otherwise configured, Chef will prototype with GPT‑4o mini or GPT‑4.1 nano (limits apply).',
+    tooltip: 'Unless otherwise configured, MojoCode prototypes with GPT‑4o mini or GPT‑4.1 nano (snarky limits apply).',
   },
   {
     text: 'collaborative text editor',
     tooltip: (
       <>
-        Chef will use the{' '}
+        MojoCode will wire up the{' '}
         <TooltipLink href="https://www.convex.dev/components/prosemirror-sync">Collaborative Text Editor</TooltipLink>{' '}
         Convex <TooltipLink href="https://www.convex.dev/components">component</TooltipLink>.
       </>
@@ -65,7 +65,7 @@ const HIGHLIGHTS: Highlight[] = [
     text: 'upload',
     tooltip: (
       <>
-        Chef will use Convex’s built-in{' '}
+        MojoCode will use Convex's built-in{' '}
         <TooltipLink href="https://docs.convex.dev/file-storage">file upload capabilities</TooltipLink>.
       </>
     ),
@@ -74,7 +74,7 @@ const HIGHLIGHTS: Highlight[] = [
     text: 'full text search',
     tooltip: (
       <>
-        Chef will use Convex’s built-in{' '}
+        MojoCode will use Convex's built-in{' '}
         <TooltipLink href="https://docs.convex.dev/search/text-search">full text search</TooltipLink> capabilities.
       </>
     ),
@@ -83,7 +83,7 @@ const HIGHLIGHTS: Highlight[] = [
     text: 'presence',
     tooltip: (
       <>
-        Chef will use the <TooltipLink href="https://www.convex.dev/components/presence">Presence</TooltipLink>{' '}
+        MojoCode will use the <TooltipLink href="https://www.convex.dev/components/presence">Presence</TooltipLink>{' '}
         Convex&nbsp;<TooltipLink href="https://www.convex.dev/components">component</TooltipLink>.
       </>
     ),
@@ -309,7 +309,10 @@ export const MessageInput = memo(function MessageInput({
               >
                 <div className="ml-3 flex items-center gap-1">
                   <h2 className="text-sm font-bold">Use a recipe</h2>
-                  <Tooltip tip="Recipes are Chef prompts that add powerful full-stack features to your app." side="top">
+                  <Tooltip
+                    tip="Recipes are MojoCode prompts that bolt sarcastically powerful full-stack features onto your app."
+                    side="top"
+                  >
                     <span className="cursor-help text-content-tertiary">
                       <InformationCircleIcon className="size-4" />
                     </span>
@@ -417,7 +420,7 @@ const TextareaWithHighlights = memo(function TextareaWithHighlights({
 
   const blocks = useMemo(() => {
     const pattern = highlights
-      .map((h) => h.text) // we assume text doesn’t contain special characters
+      .map((h) => h.text) // we assume text doesn't contain special characters
       .join('|');
     const regex = new RegExp(pattern, 'gi');
 
@@ -593,7 +596,7 @@ const NewLineShortcut = memo(function NewLineShortcut() {
 const CharacterWarning = memo(function CharacterWarning() {
   return (
     <Tooltip
-      tip="Chef performs better with shorter prompts. Consider making your prompt more concise or breaking it into smaller chunks."
+      tip="MojoCode performs better with shorter prompts. Trim it down before it sends you passive-aggressive notes."
       side="bottom"
     >
       <div className="flex cursor-help items-center text-xs text-content-warning">

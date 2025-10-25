@@ -478,7 +478,7 @@ export const Chat = memo(
         (retries.numFailures >= MAX_RETRIES || now < retries.nextRetry) &&
         !hasApiKeySet(modelSelection, useGeminiAuto, apiKey)
       ) {
-        let message: string | ReactNode = 'Chef is too busy cooking right now. ';
+        let message: string | ReactNode = 'MojoCode is dramatically “busy” right now. ';
         if (retries.numFailures >= MAX_RETRIES) {
           message = (
             <>
@@ -754,7 +754,7 @@ export function NoTokensText({ resetDisableChatMessage }: { resetDisableChatMess
         {referralCode && referralStats?.left !== 0 && (
           <div className="w-full space-y-2">
             <p className="text-sm text-content-secondary">
-              Refer a friend and Get 85,000 free Chef tokens for each
+              Refer a friend and get 85,000 free MojoCode tokens for each
               {referralStats?.left === 5 || !referralStats ? ' (limit 5)' : ` (${referralStats.left} / 5)`}
             </p>
             <div className="flex items-center gap-2">

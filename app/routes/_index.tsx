@@ -7,8 +7,11 @@ import { Homepage } from '~/components/Homepage.client';
 
 export const meta: MetaFunction = () => {
   return [
-    { title: 'Chef by Convex | Generate realtime full‑stack apps' },
-    { name: 'description', content: 'Cook up something hot with Chef, the full-stack AI coding agent from Convex' },
+    { title: 'MojoCode by Convex | Real-time full-stack apps with side-eye' },
+    {
+      name: 'description',
+      content: 'MojoCode is the sarcastic AI dev that builds full-stack apps for you while roasting your TODO list.',
+    },
     {
       property: 'og:image',
       content: '/social_preview_index.png',
