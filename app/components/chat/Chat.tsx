@@ -478,7 +478,7 @@ export const Chat = memo(
         (retries.numFailures >= MAX_RETRIES || now < retries.nextRetry) &&
         !hasApiKeySet(modelSelection, useGeminiAuto, apiKey)
       ) {
-        let message: string | ReactNode = 'MojoCode is dramatically “busy” right now. ';
+        let message: string | ReactNode = 'MojoCode is dramatically "busy" right now. ';
         if (retries.numFailures >= MAX_RETRIES) {
           message = (
             <>

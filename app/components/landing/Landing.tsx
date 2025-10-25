@@ -43,7 +43,7 @@ export default function Landing() {
             </a>{' '}
             primitives directly to your code generation, your apps are automatically equipped with optimal backend
             patterns and best practices. Your full-stack apps come with a built-in database, zero config auth, file
-            uploads, real-time UIs, and background workflows. If you want to check out the “secret” sauce that powers
+            uploads, real-time UIs, and background workflows. If you want to check out the "secret" sauce that powers
             MojoCode, you can view or download the system prompt{' '}
             <a
               href="https://github.com/get-convex/chef/releases/latest"
